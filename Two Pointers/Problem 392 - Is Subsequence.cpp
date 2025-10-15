@@ -6,32 +6,59 @@
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
-        stack<char>st;
-        int j=s.length()-1;
 
-        for (int i=0; i<t.length();i++)
-        {
-            st.push(t[i]);
-        }
-        while (!st.empty() && j>=0)
-        {
-            if(st.top()!=s[j])
-            {
-                st.pop();
-            }
-            else
-            {
-                st.pop();
-                j--;
-            }
-        }
-        if(j==-1)
+        int second=0;
+        if(s.length()==0)
         {
             return true;
         }
-        else
+        for (int i=0; i<t.length() && second<s.length(); i++)
         {
-            return false;
+            if(t[i]==s[second])
+            {
+                second++;
+            }
+            if(second==s.length())
+            {
+                return true;
+            }
         }
+        return false;
     }
-}
+};
+
+// class Solution {
+// public:
+//     bool isSubsequence(string s, string t) {
+//         stack<char>st;
+//         int j=s.length()-1;
+
+//         for (int i=0; i<t.length();i++)
+//         {
+//             st.push(t[i]);
+//         }
+//         while (!st.empty() && j>=0)
+//         {
+//             if(st.top()!=s[j])
+//             {
+//                 st.pop();
+//             }
+//             else
+//             {
+//                 st.pop();
+//                 j--;
+//             }
+//         }
+//         if(j==-1)
+//         {
+//             return true;
+//         }
+//         else
+//         {
+//             return false;
+//         }
+//     }
+// };
+
+
+
