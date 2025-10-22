@@ -6,3 +6,30 @@
 // Note that pos is not passed as a parameter.
 
 // Return true if there is a cycle in the linked list. Otherwise, return false.
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        ListNode* fast=head;
+        ListNode* slow = head;
+
+        while (fast!=NULL && fast->next!= NULL)
+        {
+            fast=fast->next->next;
+            slow=slow->next;
+            if (slow==fast)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+};
