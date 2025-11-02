@@ -20,7 +20,8 @@ Each solution focuses on clean, efficient, and readable code.
 
 - Arrays & Strings  
 - Linked Lists
-- Two Pointers 
+- Two Pointers
+- HashMaps
 - Trees & Graphs  
 - Dynamic Programming  
 - Recursion & Backtracking  
