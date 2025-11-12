@@ -11,8 +11,8 @@ Each solution focuses on clean, efficient, and readable code.
 - Each Folder contains problems of the same topic.
 - Each file corresponds to a single problem.
 - File names usually follow the pattern:  
-  `Problem problem_number - problem_name.cpp`  
-  (e.g., `Problem 1 - two_sum.cpp`, `Problem 21 - merge_two_sorted_lists.cpp`)
+  `Problem problem_number - problemname.cpp`  
+  (e.g., `Problem 1 - two sum.cpp`, `Problem 21 - merge twosorted lists.cpp`)
 
 ---
 
