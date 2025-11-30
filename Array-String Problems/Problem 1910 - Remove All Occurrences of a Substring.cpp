@@ -4,3 +4,18 @@
 // Return s after removing all occurrences of part.
 
 // A substring is a contiguous sequence of characters in a string.
+
+class Solution {
+public:
+    string removeOccurrences(string s, string part) {
+        int end= s.length();
+        int pl=part.length();
+
+        while(end>0 && s.find(part)<end)
+        {
+            s.erase((s.find(part)),pl);
+            end= s.length();  
+        }
+        return s;
+    }
+};
