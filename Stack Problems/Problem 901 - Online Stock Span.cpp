@@ -11,3 +11,40 @@
 
   // StockSpanner() Initializes the object of the class.
   // int next(int price) Returns the span of the stock's price given that today's price is price.
+
+class StockSpanner {
+public:
+vector<int>ans;
+vector<int>prices;
+stack<int>st;
+int count=0;
+    StockSpanner() {
+        
+    }
+    
+    int next(int price) {
+        int i = count;
+        prices.push_back(price);
+        while (!st.empty()&& prices[i]>=prices[st.top()])
+            {
+                st.pop();
+            }
+
+        if (st.empty())
+        {
+            ans.push_back(i+1);
+        }
+        else
+        {
+            ans.push_back(i-st.top());
+        }
+        st.push(i);
+        return ans[count++];
+    }
+};
+
+/**
+ * Your StockSpanner object will be instantiated and called as such:
+ * StockSpanner* obj = new StockSpanner();
+ * int param_1 = obj->next(price);
+ */
