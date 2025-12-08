@@ -20,12 +20,12 @@ public:
     bool hasCycle(ListNode *head) {
         ListNode* fast=head;
         ListNode* slow = head;
-
+        // slow and fast only meet at the cycle
         while (fast!=NULL && fast->next!= NULL)
         {
-            fast=fast->next->next;
-            slow=slow->next;
-            if (slow==fast)
+            fast=fast->next->next; // 2 steps
+            slow=slow->next;        // 1 step
+            if (slow==fast) // cycle found
             {
                 return true;
             }
