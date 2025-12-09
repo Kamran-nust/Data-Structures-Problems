@@ -19,7 +19,7 @@ public:
 
         if(p==NULL || q==NULL)
         {
-            return p==q;
+            return p==q; // it will return true if both are NULL. if one of them is not NULL it will returb false.
         }
 
         bool left= isSameTree(p->left, q->left);
